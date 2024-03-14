@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../res/tree.css">
   <link rel="stylesheet" href="../res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Settings</title>
+  <title>Tool Inventory</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -34,11 +34,11 @@
     </li>
     <li>
       <button class="tree open"></button>
-      <a class="active" href="index.html">Settings</a>
+      <a href="index.html">Settings</a>
       <ul>
         <li><button class="tree blank"></button><a href="jogaxes.html">Jog Axes</a></li>
         <li><button class="tree blank"></button><a href="manualprogram.html">Manual Program</a></li>
-        <li><button class="tree blank"></button><a href="toolinventory.html">Tool Inventory</a></li>
+        <li><button class="tree blank"></button><a class="active" href="toolinventory.html">Tool Inventory</a></li>
         <li>
           <button class="tree closed"></button>
           <a href="other settings/index.html">Other Settings</a>
@@ -66,100 +66,17 @@
   <div>
     <a href="index.html">Settings</a>
   </div>
+  <div>/</div>
+  <div>
+    <a href="toolinventory.html">Tool Inventory</a>
+  </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Settings</h1>
+                        <h1>Tool Inventory</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>As seen in the picture below, the Settings page contains options which allows user to modify the Jog, the tool inventory used in and few more additional settings grouped together in the Other Settings section.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/settings.png" alt="settings"></span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Multi-axis Jog</p>
-</li>
-<li>
-<p>Manual program</p>
-</li>
-<li>
-<p>Tool inventory</p>
-</li>
-<li>
-<p>Other Settings</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_multi_axis_jog">Multi-Axis Jog</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This panel is used to move one or more axes of the machine either in jog mode, or by using a hand-wheel. The current positions of all the axes can also be viewed using this panel.</p>
-</div>
-<div class="sect2">
-<h3 id="_jogging_the_axes">Jogging the axes</h3>
-<div class="paragraph">
-<p>Each back-gauge is surrounded by 6 arrows which can be used to move it in one of the 6 primary directions. When you touch one of these axes, it lights up yellow while the axis is moving.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/jogaxis.png" alt="jogaxis"></span></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-On some press-brakes, the Jog Axes screen can be used to only select the axes to be jogged, and separate Jog Forward and Jog Backward buttons mounted on the operator panel must be pressed to do the actual axis movement. In that case, the jog axes panel will appear a bit different from the one shown in the picture above.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The <strong>teach</strong> button is displayed (see picture below) when the axis jog panel has been called up while creating a direct program. Touching this button records the current back-gauge positions as the positions for the bending step that you are creating.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/jogaxis1.png" alt="jogaxis1"></span></p>
-</div>
-<div class="paragraph">
-<p><strong>Jog Velocity:</strong></p>
-</div>
-<div class="paragraph">
-<p>Use this button to jog the axis before homing. This button will appear when the axes are not homed, denoted by <span class="icon"><i class="fa fa-asterisk"></i></span>* before current position.</p>
-</div>
-<div class="paragraph">
-<p><strong>Increment:</strong></p>
-</div>
-<div class="paragraph">
-<p>Use this button to jog the axis in step of 50 or 100 or 1000 micron.
-Direct Move: Click on the current position of back gauge or ram axis to enter the target position to which the axis should move. Machine will go to stop and on pressing the start, axis will start moving to the entered position. Target position is denoted after arrow symbol. To achieve this, no other mode should be active.</p>
-</div>
-<div class="paragraph">
-<p><strong>Tonnage:</strong></p>
-</div>
-<div class="paragraph">
-<p>Use this button to set the tonnage used during ram manual moves.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/tonnage.png" alt="tonnage"></span></p>
-</div>
-<div class="paragraph">
-<p>The actual real-time position will also be displayed (if a real run-time is connected, capable of providing the position).</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tool_inventory">Tool Inventory</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This option is used to view and adjust the tool inventory. A complete tool catalogue for the type of tooling used on your press-brake is installed with RightAngle. You can select certain tools from this catalogue and tag them as being in your inventory by adjusting the quantities of the various pieces.</p>
@@ -209,8 +126,11 @@ Direct Move: Click on the current position of back gauge or ram axis to enter th
 <div class="paragraph">
 <p>Use this option to import or export tools. Once you press this button, you can find the <strong>Import</strong> and <strong>Export</strong> options being displayed. To export a tool, navigate to the corresponding tool and then press <strong>export</strong>. This opens the file selection panel. Select the directory in which you want to tool to be exported and then press the OK mark. This exports the selected tool with a .dxf extension. Similarly, you can import a .dxf/.arv file by selecting the tool traversing through the directories displayed in the file selection panel. This import and export options facilitate the exchange of defined tools across machines. Press the cancel mark to exit the transfer mode. You can create a clone of an existing tool by clicking <strong>Clone</strong>. By giving different tool height, we can change the height of tool while cloning. RightAngle will try to adjust tool geometry for the new height. If it fails, it modifies the reference point and give warning message. The tool is immediately opened for editing so you can adjust some parameters. To delete a tool permanently click on the <strong>Delete</strong> button. Note that this can be done only with tools that you imported. Tools that exist in standard tool catalogs cannot be deleted. Custom tools can be saved through <strong>save</strong> and <strong>load</strong> so that program can be used across RightAngle installed at different location.</p>
 </div>
-<div class="sect2">
-<h3 id="_selecting_a_different_tool">Selecting a different tool</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_selecting_a_different_tool">Selecting a different tool</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Selecting a different punch or die is a multiple-stage process. First touch the Punch indicator on the top to display a list of different types of tools. Then, touch the tool shape, and finally the actual tool name. Here are the 3 stages displayed in succession:</p>
 </div>
@@ -218,8 +138,10 @@ Direct Move: Click on the current position of back gauge or ram axis to enter th
 <p><span class="image"><img src="img/selectool.png" alt="selectool"></span></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_searching_a_tool">Searching a tool</h3>
+</div>
+<div class="sect1">
+<h2 id="_searching_a_tool">Searching a tool</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="img/toolsearch.png" alt="toolsearch"></span></p>
 </div>
@@ -273,55 +195,15 @@ The &lt; and &gt; are really interpreted as &#8656; or &gt;=. In other words, H&
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_creating_a_custom_tool">Creating a custom tool</h3>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_custom_tool">Creating a custom tool</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><span class="image"><img src="img/customtool.png" alt="customtool"></span></p>
 </div>
 <div class="paragraph">
 <p>By entering the parameters explained in the diagram, custom tools can be created. We can create punch, die, punch holder, and die holder using above method.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_manual_program">Manual Program</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Manual Program is used to run single bend with different tools and target. By default, this is turned off. It is available only when <strong>Settings &#8594; Other Settings &#8594; Machine Settings &#8594; General Parameters &#8594; Display &#8594; Allow manual</strong> programming is turned ON. Last run tool setup can be used, or tools can be changed through Settings.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/manual.png" alt="manual"></span></p>
-</div>
-<div class="sect2">
-<h3 id="_settings">Settings</h3>
-<div class="paragraph">
-<p>Touch the Settings button on the right to bring up the <em>Part Settings</em> dialog where you can configure the settings like material, thickness, punch, die etc.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_jog">Jog</h3>
-<div class="paragraph">
-<p>Tap the Jog button to bring up the <em>Axis Jog Panel</em>. This allows the user to freely move all the gauge axes using either the handwheel, or by holding down the jog buttons. From this panel, one can record the position of the gauges directly into the program by tapping the teach button there.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_corrections">Corrections</h3>
-<div class="paragraph">
-<p>Touch the corrections button to bring up the adjustment screen using which you can tweak bend angles after making a test piece and measuring the actual angles. You can also perform gauge adjustments by pressing the corresponding button in the Corrections dialog. See the section on <em>Corrections</em> for more details.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_cycle_editing">Cycle Editing</h3>
-<div class="paragraph">
-<p>Touch the Edit Cycle button to bring up the bend cycle editor. This can be used to control the bending cycle position and speed. See the section on <em>Cycle Editing</em> for more details.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_numeric_panel">Numeric Panel</h3>
-<div class="paragraph">
-<p>Touch the Numeric button to bring up the Numeric Panel. See <em>Numeric Panel</em> for more details.</p>
-</div>
 </div>
 </div>
 </div>
@@ -333,40 +215,13 @@ The &lt; and &gt; are really interpreted as &#8656; or &gt;=. In other words, H&
   <h3>Contents</h3>
   <ul>
     <li level="1">
-      <a href="#_multi_axis_jog">Multi-Axis Jog</a>
-    </li>
-    <li level="2">
-      <a href="#_jogging_the_axes">Jogging the axes</a>
-    </li>
-    <li level="1">
-      <a href="#_tool_inventory">Tool Inventory</a>
-    </li>
-    <li level="2">
       <a href="#_selecting_a_different_tool">Selecting a different tool</a>
     </li>
-    <li level="2">
+    <li level="1">
       <a href="#_searching_a_tool">Searching a tool</a>
     </li>
-    <li level="2">
-      <a href="#_creating_a_custom_tool">Creating a custom tool</a>
-    </li>
     <li level="1">
-      <a href="#_manual_program">Manual Program</a>
-    </li>
-    <li level="2">
-      <a href="#_settings">Settings</a>
-    </li>
-    <li level="2">
-      <a href="#_jog">Jog</a>
-    </li>
-    <li level="2">
-      <a href="#_corrections">Corrections</a>
-    </li>
-    <li level="2">
-      <a href="#_cycle_editing">Cycle Editing</a>
-    </li>
-    <li level="2">
-      <a href="#_numeric_panel">Numeric Panel</a>
+      <a href="#_creating_a_custom_tool">Creating a custom tool</a>
     </li>
   </ul>
 </aside>
@@ -374,8 +229,8 @@ The &lt; and &gt; are really interpreted as &#8656; or &gt;=. In other words, H&
                 </div>
             </div>
             <nav class="pagination">
-  <span class="prev"><a href="../run/safety messages.html">Safety Message</a></span>
-  <span class="next"><a href="jogaxes.html">Jog Axes</a></span>
+  <span class="prev"><a href="manualprogram.html">Manual Program</a></span>
+  <span class="next"><a href="other settings/index.html">Other Settings</a></span>
 </nav>
 
         </div>
