@@ -83,7 +83,7 @@
 <p>This page groups together the settings that are global.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../img/othersettings.png" alt="othersettings"></span></p>
+<p><span class="image"><img src="../img/othersettings.png" alt="othersettings" width="250"></span></p>
 </div>
 </div>
 </div>
@@ -98,8 +98,13 @@
 <div class="sect1">
 <h2 id="_language">Language</h2>
 <div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="../img/language.png" alt="language">
+</div>
+</div>
 <div class="paragraph">
-<p>Use this option to select the language preferred.</p>
+<p>Click the <strong>language</strong> drop-down list icon to choose the preferred language.</p>
 </div>
 </div>
 </div>
@@ -107,37 +112,70 @@
 <h2 id="_edit_materials">Edit Materials</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="../img/editmaterial.png" alt="editmaterial"></span></p>
+<p>From the <strong>Settings</strong> page, choose <strong>Other Settings &#8594; Edit Materials</strong> to access the Materials library.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../img/editmaterial.png" alt="editmaterial" width="400">
+</div>
 </div>
 <div class="paragraph">
-<p>You can use this dialog to view existing materials in RightAngle, add new materials or remove materials from the library. You can navigate through the material list by pressing the <strong>next</strong> and <strong>previous</strong> commands. Use the <strong>add</strong> command to add a new material to the list. Once you press this button, a page with default materials' data is shown. Change the necessary fields to modify and then press <strong>done</strong>. A warning message is issued if the changes needs to be saved. Press the ok mark to save the changes or press the cancel mark to discard the changes. To remove an existing material from the library, navigate to that material and then press <strong>delete</strong>.</p>
+<p>The <strong>Edit Materials</strong> library displays the current list of materials.</p>
 </div>
 <div class="paragraph">
-<p>The <strong>Ve/Ri</strong> field in a material is used for die selection, among others. It should always be set to a valid input, and never to 0. Currently ignores inputs if you try to set it below 1 or above 10 to prevent accidental setting of this field to 0. n corresponds to strain hardening exponent and E corresponds to Young’s Modulus.</p>
+<p>To view the list of available materials, press the <strong>next</strong> and <strong>previous</strong> navigation icons.</p>
 </div>
 <div class="paragraph">
-<p><strong>Deductions:</strong></p>
+<p>To add a new item to the list, press the <strong>add</strong> icon. Edit the material&#8217;s name and other parameters and press the <strong>done</strong> icon to save the new material.</p>
 </div>
 <div class="paragraph">
-<p>You can use bend deduction tables to control unfolding length (in addition to the earlier method of using K-factors). The first stage is defining the bend deduction tables for each material. Use this <strong>Deductions</strong> command to bring up the bend deductions table for the currently selected material.</p>
+<p>To remove an existing item from the library, press the <strong>delete</strong> icon.</p>
 </div>
 <div class="paragraph">
-<p>The bend deduction table is organized by material, then by thickness, die v-width and punch-radius. You can see the bend deduction table for S.S. in the picture shown below (the dotted horizontal lines separate one thickness from the other).</p>
+<p><strong>Ve/Ri</strong> field is used for die selection. The range of input is <strong>1 to 10</strong>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../img/deductions.png" alt="deductions"></span></p>
+<p><strong>E</strong> stands for Young&#8217;s modulus, and <strong>n</strong> for the strain hardening exponent.</p>
 </div>
 <div class="paragraph">
-<p>The list of bend deductions is seen on the left and tapping on one brings it up for editing. The currently selected entry (if any) is highlighted with a small dot near it. On the right, type in a thickness, V-width, punch radius and deduction and tap the button to either Add New Entry or Update Deduction depending on whether you are editing an existing deduction value or entering a new one. When you start with an empty database, enter the values in the corresponding input boxes and then press &lt;Enter Values Above&gt; button to add them to the deductions table.</p>
+<p>Use the <strong>deductions</strong> function to control unfolding length of a bend.</p>
 </div>
 <div class="paragraph">
-<p>You can also use the Pick buttons near the die V-width and punch-radius to pick a die or punch (from which the values are copied). Note that the deduction table is organized using only these keys: thickness, v-width and punch-radius, and not by the actual punch or die names. So, all dies that have the same V-width will share the same bend deduction entry. Once these entries are defined here, they can then be accessed from the Part Settings page.</p>
+<p>The list of bend deductions is displayed on the left. The currently selected entry is highlighted with a small dot near it.</p>
 </div>
 <div class="paragraph">
-<p><strong>Delete Entry:</strong></p>
+<p>To add a new entry, type the values for thickness, v-width, punch radius and deduction and press the <strong>Add New Entry</strong> button.</p>
 </div>
 <div class="paragraph">
-<p>Use this button to delete an entry from the bend deduction table.</p>
+<p><span class="image"><img src="../img/deductions1.png" alt="deductions1" width="415"></span></p>
+</div>
+<div class="paragraph">
+<p>To update an existing entry, type the values for thickness, v-width, punch radius and deduction and press the <strong>Update Deduction</strong> button.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../img/deductions.png" alt="deductions" width="415"></span></p>
+</div>
+<div class="paragraph">
+<p>To import the values from the tool inventory, use the <strong>Pick</strong> button
+and select the desired die and punch.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Deduction table is organized based on <strong>thickness, v-width and punch-radius</strong>, and not by the actual punch or die names.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The bend deduction entry will be the same for all dies with the same die v-width. The Part Settings page provides access to these entries after they have been defined here.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Delete Entry</strong> button to delete an entry from the bend deduction table.</p>
 </div>
 </div>
 </div>
@@ -153,19 +191,40 @@
 <h2 id="_tool_catalogues">Tool Catalogues</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>RightAngle now ships with several standardized tool catalogues. These can be installed and made available for use.</p>
+<p>Standardized tool catalogues that support a number of press brake manufacturers are available to install and use.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../img/toolcatalogue.png" alt="toolcatalogue"></span></p>
+<p>The tool catalogues window displays the <strong>installed</strong> list on the left side and the <strong>available</strong> list on the right side.</p>
 </div>
 <div class="paragraph">
-<p>This list shows the tool catalogues that are already installed on the left, and the ones that are still available on the right. You can choose Add to add a complete tool catalogue to your installation, or use Remove to remove one. Removing a tool catalogue is an operation that has some consequences, so a warning shown below pops up:</p>
+<p><span class="image"><img src="../img/toolcatalogue.png" alt="toolcatalogue" width="500"></span></p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../img/confirm3.png" alt="confirm3"></span></p>
+<p>To add a full tool catalogue, press <strong>&lt;Add</strong> button.</p>
 </div>
 <div class="paragraph">
-<p>The tool catalogues must be in a standardised format for these to be installable.</p>
+<p>To remove a tool catalogue, press the <strong>&gt;Remove</strong> button.</p>
+</div>
+<div class="paragraph">
+<p>When a tool catalogue is removed, the following confirmation window is displayed:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../img/confirm3.png" alt="confirm3" width="650"></span></p>
+</div>
+<div class="paragraph">
+<p>Press the tick button to <strong>confirm</strong>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The tool catalogues must be in a standardized format for easy installation.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -214,8 +273,8 @@
 
         </div>
         <div id="searchbox">
-          <ul id="results"></ul>
           <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
         </div>
     </div>
     <footer id="site-footer">

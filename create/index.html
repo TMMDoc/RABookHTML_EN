@@ -490,30 +490,53 @@ Use the screen to rotate the model around and verify that the import looks corre
 <p>When this program is run, the setup screen displays all the punches and dies used, along with their 'flip' states (so it can be mounted correctly by the operator):</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/directprog1.png" alt="directprog1"></span></p>
+<p><span class="image"><img src="img/directprog1.png" alt="directprog1" width="500"></span></p>
 </div>
 <div class="sect2">
 <h3 id="_settings">Settings</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/settingsdirprog.png" alt="SettingsDirProg">
+</div>
+</div>
 <div class="paragraph">
-<p>Touch the Settings button on the top left to bring up the Part Settings dialog where you can configure the settings like material, thickness, punch, die etc.</p>
+<p>Touch the <strong>Settings</strong> button on the top left to bring up the Part Settings dialog where you can configure the settings like material, thickness, punch, die etc.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_add_remove">Add / Remove</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/move.png" alt="Move">
+</div>
+</div>
 <div class="paragraph">
-<p>Touch the Add button on the bottom left panel to add bends into the program and touch the Remove button to remove them.</p>
+<p>Touch the <strong>Add</strong> button on the bottom left panel to add bends into the program and touch the <strong>Remove</strong> button to remove them.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_move_up_move_down_or_prev_bend_next_bend">Move up/ Move down or Prev Bend / Next Bend</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/updown.png" alt="UpDown">
+</div>
+</div>
 <div class="paragraph">
-<p>The <strong>Move up</strong> and <strong>Move down</strong> buttons are used to shuffle the currently selected bend up or down in the sequence. The currently selected bend is displayed in bold color, with the previous and next bends also displayed in a shadowed color. You can touch the <strong>Prev Bend</strong> or <strong>Next Bend</strong> button to display other bends for editing.</p>
+<p>The <strong>Move up</strong> and <strong>Move down</strong> buttons are used to shuffle the currently selected bend up or down in the sequence. The currently selected bend is displayed in bold color, with the previous and next bends also displayed in a shadowed color.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/navigatebend.png" alt="NavigateBend">
+</div>
+</div>
+<div class="paragraph">
+<p>You can touch the <strong>Prev Bend</strong> or <strong>Next Bend</strong> button to display other bends for editing.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_gauging">Gauging</h3>
 <div class="paragraph">
-<p>The currently selected bend is displayed in detail on the right panel, and various settings shown can be edited. To understand the meanings of Gauge Z1, Gauge Z2, Gauge R1 and Gauge R2, its necessary to understand the coordinate system used by:</p>
+<p>The currently selected bend is displayed in detail on the right panel, and various settings shown can be edited. To understand the meanings of Gauge <strong>Z1</strong>, Gauge <strong>Z2</strong>, Gauge <strong>R1</strong> and Gauge <strong>R2</strong>, its necessary to understand the coordinate system used by:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="img/gauging.png" alt="gauging"></span></p>
@@ -521,24 +544,42 @@ Use the screen to rotate the model around and verify that the import looks corre
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The Z1 and Z2 axes are the gauge positions along the machine table.</p>
+<p>The <strong>Z1</strong> and <strong>Z2</strong> axes are the gauge positions along the machine table.</p>
 </li>
 <li>
-<p>X axes are gauge distances from the bend line, with increasing X going into the machine.</p>
+<p><strong>X</strong> axes are gauge distances from the bend line, with increasing <strong>X</strong> going into the machine.</p>
 </li>
 <li>
-<p>The R axis is the vertical positions of the gauges, with positive R going upwards.</p>
+<p>The <strong>R</strong> axis is the vertical positions of the gauges, with positive R going upwards.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>When the outer height of the flange that needs to be bent is specified, and the gauge position is computed automatically. This computation takes the material, thickness and die opening into account (you can toggle between the two to see the actual Gauge-X that has been computed for a given flange height). On machines where the two gauges can move independently in X, you can input the values for X1 and X2 using the input boxes provided.</p>
+<p>When the outer height of the flange that needs to be bent is specified, and the gauge position is computed automatically. This computation takes the material, thickness and die opening into account (you can toggle between the two to see the actual Gauge-<strong>X</strong> that has been computed for a given flange height). On machines where the two gauges can move independently in <strong>X</strong>, you can input the values for <strong>X1</strong> and <strong>X2</strong> using the input boxes provided.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_corrections">Corrections</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/correctionsangle.png" alt="CorrectionsAngle">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/correctionsgauge.png" alt="CorrectionsGauge">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/correctionssafety.png" alt="CorrectionsSafety">
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_jog">Jog</h3>
 <div class="paragraph">
-<p>Touch the Jog button to bring up the Axis Jog Panel. This allows the user to freely move all the gauge axes using either the handwheel, or by holding down the jog buttons. From this panel, one can record the position of the gauges directly into the program by tapping the teach button there.</p>
+<p>Press the <strong>Jog</strong> button to bring up the Axis Jog Panel. This allows the user to freely move all the gauge axes using either the handwheel, or by holding down the jog buttons. From this panel, one can record the position of the gauges directly into the program by tapping the teach button there.</p>
 </div>
 </div>
 <div class="sect2">
@@ -550,7 +591,7 @@ Use the screen to rotate the model around and verify that the import looks corre
 <div class="sect2">
 <h3 id="_run">Run</h3>
 <div class="paragraph">
-<p>Touch the Run to run the currently editing part. If the tooling of the part doesn’t differ from the last run setup, setup sheet will be skipped.</p>
+<p>Press the <strong>Run</strong> button to run the currently editing part. If the tooling of the part doesn’t differ from the last run setup, setup sheet will be skipped.</p>
 </div>
 </div>
 </div>
@@ -644,6 +685,9 @@ Use the screen to rotate the model around and verify that the import looks corre
       <a href="#_gauging">Gauging</a>
     </li>
     <li level="2">
+      <a href="#_corrections">Corrections</a>
+    </li>
+    <li level="2">
       <a href="#_jog">Jog</a>
     </li>
     <li level="2">
@@ -664,8 +708,8 @@ Use the screen to rotate the model around and verify that the import looks corre
 
         </div>
         <div id="searchbox">
-          <ul id="results"></ul>
           <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
         </div>
     </div>
     <footer id="site-footer">

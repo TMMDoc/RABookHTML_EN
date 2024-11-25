@@ -1,26 +1,44 @@
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_multi_axis_jog">Multi-Axis Jog</a>
-<ul class="sectlevel2">
 <li><a href="#_jogging_the_axes">Jogging the axes</a></li>
 </ul>
-</li>
-</ul>
 </div>
-<div class="sect1">
-<h2 id="_multi_axis_jog">Multi-Axis Jog</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This panel is used to move one or more axes of the machine either in jog mode, or by using a hand-wheel. The current positions of all the axes can also be viewed using this panel.</p>
+<p><strong>Jog Axes</strong> panel is used to control one or more axes of the machine component to ensure precise bending operation. The current positions of all the axes can also be viewed in this panel.</p>
 </div>
-<div class="sect2">
-<h3 id="_jogging_the_axes">Jogging the axes</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jogging_the_axes">Jogging the axes</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Each back-gauge is surrounded by 6 arrows which can be used to move it in one of the 6 primary directions. When you touch one of these axes, it lights up yellow while the axis is moving.</p>
+<p>Each back-gauge is surrounded by six arrows which can be used to move it in one of the six primary directions. When you touch one of these axes, the arrows turns yellow in colour.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/jogaxis.png" alt="jogaxis"></span></p>
+<p><span class="image"><img src="img/jogaxis.png" alt="jogaxis" width="600"></span></p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+On some press-brakes, the Jog Axes screen can be used to only select the axes to be jogged, and separate Jog Forward and Jog Backward buttons mounted on the operator panel must be pressed to do the actual axis movement. In that case, the jog axes panel will appear a bit different from the one shown in the picture above.
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/Teach.png" alt="Teach" width="600">
+</div>
+</div>
+<div class="paragraph">
+<p>Press the <strong>teach</strong> button to record the current back-gauge positions as the input positions for the new bend.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -29,42 +47,55 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-On some press-brakes, the Jog Axes screen can be used to only select the axes to be jogged, and separate Jog Forward and Jog Backward buttons mounted on the operator panel must be pressed to do the actual axis movement. In that case, the jog axes panel will appear a bit different from the one shown in the picture above.
+The teach button is displayed only when the <strong>jog</strong> option is used from the direct program mode.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The <strong>teach</strong> button is displayed (see picture below) when the axis jog panel has been called up while creating a direct program. Touching this button records the current back-gauge positions as the positions for the bending step that you are creating.</p>
+<p><span class="image"><img src="img/jogaxis1.png" alt="jogaxis1" width="600"></span></p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="img/jogaxis1.png" alt="jogaxis1"></span></p>
+<p>Press the <strong>increment</strong> button to jog the axis in step of 50 or 100 or 1000 microns.</p>
 </div>
 <div class="paragraph">
-<p><strong>Jog Velocity:</strong></p>
+<p>Press the arrow to select an axis and click the <span class="icon"><i class="fa fa-plus"></i></span> and <span class="icon"><i class="fa fa-minus"></i></span> buttons to change the value.</p>
 </div>
 <div class="paragraph">
-<p>Use this button to jog the axis before homing. This button will appear when the axes are not homed, denoted by <span class="icon"><i class="fa fa-asterisk"></i></span>* before current position.</p>
+<p>Target position is denoted by a small arrow symbol.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Machine will go to stop mode. Press start to move the axis to the target position.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To achieve this, no other mode should be active.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p><strong>Increment:</strong></p>
+<p>Press the <strong>tonnage</strong> button to set the tonnage used during ram manual moves.</p>
 </div>
 <div class="paragraph">
-<p>Use this button to jog the axis in step of 50 or 100 or 1000 micron.
-Direct Move: Click on the current position of back gauge or ram axis to enter the target position to which the axis should move. Machine will go to stop and on pressing the start, axis will start moving to the entered position. Target position is denoted after arrow symbol. To achieve this, no other mode should be active.</p>
+<p><span class="image"><img src="img/tonnage.png" alt="tonnage" width="250"></span></p>
 </div>
 <div class="paragraph">
-<p><strong>Tonnage:</strong></p>
-</div>
-<div class="paragraph">
-<p>Use this button to set the tonnage used during ram manual moves.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="img/tonnage.png" alt="tonnage"></span></p>
-</div>
-<div class="paragraph">
-<p>The actual real-time position will also be displayed (if a real run-time is connected, capable of providing the position).</p>
-</div>
+<p>The real-time position will also be displayed (if a real run-time is connected, capable of providing the position).</p>
 </div>
 </div>
 </div>
