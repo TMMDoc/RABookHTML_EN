@@ -1,0 +1,423 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_options">Options</a>
+<ul class="sectlevel2">
+<li><a href="#_safety">Safety</a></li>
+<li><a href="#_side_doors">Side doors</a></li>
+<li><a href="#_punch_clamp">Punch clamp</a></li>
+<li><a href="#_die_clamp">Die clamp</a></li>
+<li><a href="#_light">Light</a></li>
+<li><a href="#_cold">Cold</a></li>
+<li><a href="#_crown_limit_switch">Crown limit switch</a></li>
+<li><a href="#_robot_interface">Robot interface</a></li>
+<li><a href="#_ethernet_cat_io">Ethernet CAT IO</a></li>
+<li><a href="#_oil_lubrication">Oil lubrication</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_options">Options</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/PLCOptions.png" alt="PLCOptions">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_safety">Safety</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function">Function</h4>
+<div class="paragraph">
+<p>This parameter activates/deactivates the laser safe functionality in the PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description">Description</h4>
+<div class="paragraph">
+<p>When this parameter is ON, the laser safe functions are activated in the PLC, such as Enable functions, Side door functions etc.., If this parameter is OFF, then the 'Side Door' options will be available for selection.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_side_doors">Side doors</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1 input / 2 inputs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1 input</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_2">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the number of digital inputs used for the configuration of side doors.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_2">Description</h4>
+<div class="paragraph">
+<p>This parameter is available only if the safety option is OFF. If the left and right-side doors are configured in 2 digital inputs then '2 inputs' selected, else if the left and right doors are combined in hardware circuit and mapped to 1 digital input, then '1 input' is selected.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_punch_clamp">Punch clamp</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_3">Function</h4>
+<div class="paragraph">
+<p>This parameter activates/deactivates the punch clamp functionality in PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_3">Description</h4>
+<div class="paragraph">
+<p>When this parameter is ON, the soft key 'Clamp/Unclamp Punch' is available in the options soft key page. If this parameter is OFF, the soft key will disappear and the functionality in the PLC is also deactivated.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_die_clamp">Die clamp</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_4">Function</h4>
+<div class="paragraph">
+<p>This parameter activates/deactivates the die clamp functionality in PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_4">Description</h4>
+<div class="paragraph">
+<p>When this parameter is ON, the soft key 'Clamp/Unclamp Die' is available in the options soft key page. If this parameter is OFF, the soft key will disappear and the functionality in the PLC is also deactivated.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_light">Light</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_5">Function</h4>
+<div class="paragraph">
+<p>This parameter activates/deactivates the Light functionality in PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_5">Description</h4>
+<div class="paragraph">
+<p>When this parameter is ON, the soft key 'Light On/Off' is available in the options soft key page. If this parameter is OFF, the soft key will disappear and the functionality in the PLC is also deactivated.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cold">Cold</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_6">Function</h4>
+<div class="paragraph">
+<p>This parameter activates/deactivates the cold condition functionality in PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_6">Description</h4>
+<div class="paragraph">
+<p>When this parameter is ON, the soft key 'Cold On/Off' is available in the options soft key page. If this parameter is OFF, the soft key will disappear and the functionality in the PLC is also deactivated.</p>
+</div>
+<div class="paragraph">
+<p>When the Cold soft key is switched ON, the cold condition parameter of the Y-axis is activated. Also, if the temperature is below the normal working condition then this function is activated automatically and keeps the soft key always high.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_crown_limit_switch">Crown limit switch</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NO SWITCH / ONE SWITCH / TWO SWITCH</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NO SWITCH</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_7">Function</h4>
+<div class="paragraph">
+<p>Used to configure the number of crown limit switch.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_7">Description</h4>
+<div class="paragraph">
+<p>Crowning device can be fitted with limit switches. This option is used to configure the limit switches.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_robot_interface">Robot interface</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON / OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_8">Function</h4>
+<div class="paragraph">
+<p>Used to enable robot interface feature. Only if robot interface is ON, robot input configurations will be available in General &#8594; Digital input config.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_8">Description</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Robot interface can be set to ON only if robot interface feature is enabled in the license.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ethernet_cat_io">Ethernet CAT IO</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON / Yes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_9">Function</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_description_9">Description</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oil_lubrication">Oil lubrication</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">On / Off</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Off</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_10">Function</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_description_10">Description</h4>
+
+</div>
+</div>
+</div>
+</div>

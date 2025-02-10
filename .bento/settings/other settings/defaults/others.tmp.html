@@ -1,0 +1,243 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_tonnage">Tonnage</a>
+<ul class="sectlevel2">
+<li><a href="#_default_tonnage_in_jog_mode">Default tonnage in jog mode</a></li>
+<li><a href="#_max_tonnage_in_jog_mode">Max tonnage in jog mode</a></li>
+</ul>
+</li>
+<li><a href="#_backgauge">Backgauge</a>
+<ul class="sectlevel2">
+<li><a href="#_z_axis_backgauge_speed_diff_percent">Z axis backgauge speed diff percent</a></li>
+<li><a href="#_use_flange_height_if_possible">Use flange height if possible</a></li>
+<li><a href="#_additional_backgauge_finger_mode">Additional backgauge finger-mode</a></li>
+<li><a href="#_z_axes_limited_velocity">Z-axes limited velocity</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_tonnage">Tonnage</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/OthersTonnage.png" alt="OthersTonnage">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_default_tonnage_in_jog_mode">Default tonnage in jog mode</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1 to 12</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">KN</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function">Function</h4>
+<div class="paragraph">
+<p>This parameter is used to set the default tonnage for jog mode.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_max_tonnage_in_jog_mode">Max tonnage in jog mode</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1 to 25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">KN</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_2">Function</h4>
+<div class="paragraph">
+<p>This parameter is not used for now.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_backgauge">Backgauge</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/AddBackgauge.png" alt="AddBackgauge">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_z_axis_backgauge_speed_diff_percent">Z axis backgauge speed diff percent</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1 to 100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">20</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_3">Function</h4>
+<div class="paragraph">
+<p>When moving Z1 and Z2 together, the speed difference in percentage with which one BG should move. If moving left (considering operator is standing in front of the machine), Z2 will move slower than Z1. If moving right, Z1 will move slower than Z2.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_use_flange_height_if_possible">Use flange height if possible</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Checked/Unchecked</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Unchecked</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_additional_backgauge_finger_mode">Additional backgauge finger-mode</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Checked/Unchecked</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Checked</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_4">Function</h4>
+<div class="paragraph">
+<p>Additional backgauge finger mode provides extra support points for positioning larger or complex workpieces.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description">Description</h4>
+<div class="paragraph">
+<p>Enhances workpiece stability and accuracy during bending by using multiple backgauge fingers for precise alignment.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_z_axes_limited_velocity">Z-axes limited velocity</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1 to 33</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">33</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_5">Function</h4>
+<div class="paragraph">
+<p>Z-axis limited velocity controls the maximum speed of the backgauge&#8217;s movement along the Z-axis to ensure safe and precise positioning</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_2">Description</h4>
+<div class="paragraph">
+<p>When the manual Z-axis is mounted on the machine, the back gauge operates at a slower speed to ensure precision and prevent potential damage</p>
+</div>
+</div>
+</div>
+</div>
+</div>

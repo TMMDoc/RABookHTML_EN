@@ -1,0 +1,586 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_safety">Safety</a>
+<ul class="sectlevel2">
+<li><a href="#_safety_mode">Safety mode</a></li>
+</ul>
+</li>
+<li><a href="#_force">Force</a>
+<ul class="sectlevel2">
+<li><a href="#_air_bend_force_factor">Air bend force factor</a></li>
+<li><a href="#_hemming_factor">Hemming factor</a></li>
+</ul>
+</li>
+<li><a href="#_deflection">Deflection</a>
+<ul class="sectlevel2">
+<li><a href="#dm">Deflection method</a></li>
+<li><a href="#_stiffness_factor">Stiffness factor</a></li>
+<li><a href="#_rigidity_factor">Rigidity factor</a></li>
+<li><a href="#_angle_correction_factor">Angle correction factor</a></li>
+<li><a href="#_three_angle_correction_method">Three angle correction method</a></li>
+<li><a href="#_bend_calculation_method">Bend calculation method</a></li>
+<li><a href="#bscm">Bend stroke calculation method</a></li>
+</ul>
+</li>
+<li><a href="#_other_settings">Other settings</a>
+<ul class="sectlevel2">
+<li><a href="#_hemming_pre_bend_angle">Hemming pre-bend angle</a></li>
+<li><a href="#_adjust_r_axis_target_by_crown_aim">Adjust R axis target by crown aim</a></li>
+<li><a href="#_keep_flange_height">Keep Flange height</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_safety">Safety</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/safety2.png" alt="safety2">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_safety_mode">Safety mode</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Normal, Field Mute, Tray</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Normal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function">Function</h4>
+<div class="paragraph">
+<p>Default value for lazerSafe safety method.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_force">Force</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/Safety2.png" alt="Safety2">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_air_bend_force_factor">Air bend force factor</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1 to 5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_2">Function</h4>
+<div class="paragraph">
+<p>Factor by which calculated force should be multiplied for air bending.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_2">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hemming_factor">Hemming factor</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1 to 10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_3">Function</h4>
+<div class="paragraph">
+<p>Factor by which calculated force should be multiplied for bottoming and hem bending method.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_3">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deflection">Deflection</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/Deflection.png" alt="Deflection">
+</div>
+</div>
+<div class="sect2">
+<h3 id="dm">Deflection method</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Linear /Calibration /Theory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Theory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_4">Function</h4>
+<div class="paragraph">
+<p>This parameter is used to select the method used for deflection computation.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If <strong>calibration</strong> is selected, deflection is derived from deflection table and deflection factor set.</p>
+</li>
+<li>
+<p>If <strong>theory</strong> is selected, deflection value is calculated theoretically using stiffness and rigidity factor.</p>
+</li>
+<li>
+<p>If <strong>linear</strong> is selected, deflection is computed using stiffness of frame and relaxation stiffness values in machine parameter (<strong>General parameters &#8594; Machine</strong> tab).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_4">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stiffness_factor">Stiffness factor</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1 to 20</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_5">Function</h4>
+<div class="paragraph">
+<p>Stiffness factor considered while calculating beam deflection. Changing this parameter will greatly influence bending depth calculation.</p>
+</div>
+<div class="paragraph">
+<p>NoTE: This parameter is visible only when <strong>Theory</strong> option is selected in <strong>calibration method</strong>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_5">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rigidity_factor">Rigidity factor</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1 to 20</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_6">Function</h4>
+<div class="paragraph">
+<p>Rigidity factor considered while calculating beam deflection. Changing this parameter will greatly influence bending depth calculation.</p>
+</div>
+<div class="paragraph">
+<p>NoTE: This parameter is visible only when <strong>Theory</strong> option is selected in <a href="#dm">Deflection method</a> parameter.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_6">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_angle_correction_factor">Angle correction factor</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.5 to 1.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_7">Function</h4>
+<div class="paragraph">
+<p>While entering angle correction, the difference between desired angle and measured angle is multiplied by this parameter value internally. For example, if angle correction factor is 1.1, desired angle is 90 deg and measured angle is 95 deg, the correction is applied for angle difference of 5.5 deg (5x1.1=5.5).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_7">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_three_angle_correction_method">Three angle correction method</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Basic / Advanced</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Advanced</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_8">Function</h4>
+<div class="paragraph">
+<p>Selecting Basic does two angle correction and then adjusts crowning. Advanced applies angle correction using parabolic approach. It is recommended to use Basic method for machines with hydraulic crowning.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_8">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bend_calculation_method">Bend calculation method</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Default/TBS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_9">Function</h4>
+<div class="paragraph">
+<p>When the Bend calculation method is set to TBS, FluxBend can perform force, bend deduction, spring back, and bend radius calculations inline.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_9">Description</h4>
+<div class="paragraph">
+<p>When this parameter is set to TBS, the <a href="#bscm">Bend stroke calculation method</a> parameter is visible.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="bscm">Bend stroke calculation method</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Default/TBS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_10">Function</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_description_10">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_settings">Other settings</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/OtherSettings.png" alt="OtherSettings">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hemming_pre_bend_angle">Hemming pre-bend angle</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10 to 60</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">45</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">°</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_11">Function</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_description_11">Description</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adjust_r_axis_target_by_crown_aim">Adjust R axis target by crown aim</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">YES / No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_12">Function</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_description_12">Description</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_keep_flange_height">Keep Flange height</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">YES / No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">No</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_13">Function</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_description_13">Description</h4>
+
+</div>
+</div>
+</div>
+</div>

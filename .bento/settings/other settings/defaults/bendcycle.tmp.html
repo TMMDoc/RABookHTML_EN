@@ -1,0 +1,519 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_speed">Speed</a>
+<ul class="sectlevel2">
+<li><a href="#_slow_down_speed_percent">Slow down speed percent</a></li>
+<li><a href="#_bdc_speed">BDC speed</a></li>
+<li><a href="#_release_speed">Release speed</a></li>
+<li><a href="#_back_gauge_speed">Back Gauge speed</a></li>
+</ul>
+</li>
+<li><a href="#_distance">Distance</a>
+<ul class="sectlevel2">
+<li><a href="#_slow_down_position_from_pinch_point">Slow down position from pinch point</a></li>
+<li><a href="#_udp_position_from_pinch_point">UDP position from pinch point</a></li>
+<li><a href="#_pinch_adjust">Pinch adjust</a></li>
+</ul>
+</li>
+<li><a href="#_limit">Limit</a>
+<ul class="sectlevel2">
+<li><a href="#_pinch_adjust_limit">Pinch adjust limit</a></li>
+<li><a href="#_two_angle_correction_bend_length_limit">Two angle correction bend length limit</a></li>
+<li><a href="#_three_angle_correction_bend_length_limit">Three angle correction bend length limit</a></li>
+</ul>
+</li>
+<li><a href="#_time">Time</a>
+<ul class="sectlevel2">
+<li><a href="#_dwell_time">Dwell time</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_speed">Speed</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/BendCylceSpeed.png" alt="BendCylceSpeed">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_slow_down_speed_percent">Slow down speed percent</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function">Function</h4>
+<div class="paragraph">
+<p>Default slow down speed percentage of fast closing ram speed when no data is entered in bend time line cycle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bdc_speed">BDC speed</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_2">Function</h4>
+<div class="paragraph">
+<p>Percentage of bending speed with which ram moves during bending when no data is entered in bend timeline cycle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_2">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_release_speed">Release speed</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_3">Function</h4>
+<div class="paragraph">
+<p>Percentage of bending speed with which ram moves during decompression phase when no data is entered in bend timeline cycle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_3">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_back_gauge_speed">Back Gauge speed</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_4">Function</h4>
+<div class="paragraph">
+<p>Percentage of BG speed with which back gauge moves.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_4">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_distance">Distance</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/BendCylceDistance.png" alt="BendCylceDistance">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_slow_down_position_from_pinch_point">Slow down position from pinch point</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_5">Function</h4>
+<div class="paragraph">
+<p>Default value of mute position when no data is entered in bend timeline cycle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_5">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_udp_position_from_pinch_point">UDP position from pinch point</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10-999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_6">Function</h4>
+<div class="paragraph">
+<p>Default distance ram should move from pinch position during opening when no data is entered in bend timeline cycle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_6">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pinch_adjust">Pinch adjust</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-1 to 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_7">Function</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_description_7">Description</h4>
+
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_limit">Limit</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/BendCylceLimit.png" alt="BendCylceLimit">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pinch_adjust_limit">Pinch adjust limit</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.5 to 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_8">Function</h4>
+<div class="paragraph">
+<p>This parameter is not used for now.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_8">Description</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_two_angle_correction_bend_length_limit">Two angle correction bend length limit</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">500-3000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_9">Function</h4>
+<div class="paragraph">
+<p>Minimum bend length required for activation of two angle correction.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If two angle correction is activated for smaller bend length, result may vary considerably as two angle correction is intended for longer bend length.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_9">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_three_angle_correction_bend_length_limit">Three angle correction bend length limit</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">500-3000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_10">Function</h4>
+<div class="paragraph">
+<p>Minimum bend length required for activation of three angle correction.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If three angle correction is activated for smaller bend length, result may vary considerably as three angle correction is intended for longer bend length.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_10">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_time">Time</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/BendCylceTime.png" alt="BendCylceTime">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dwell_time">Dwell time</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100 to 5000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_11">Function</h4>
+<div class="paragraph">
+<p>Default dwell time after bending when no data is entered in bend timeline cycle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_11">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+</div>
+</div>

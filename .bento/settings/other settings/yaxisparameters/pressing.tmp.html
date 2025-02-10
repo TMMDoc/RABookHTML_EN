@@ -1,0 +1,669 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_speed_and_acceleration">Speed and acceleration</a>
+<ul class="sectlevel2">
+<li><a href="#_maximum_operating_speed">Maximum operating speed</a></li>
+<li><a href="#_limited_pressing_speed">Limited pressing speed</a></li>
+<li><a href="#_acceleration_0_to_max_speed">Acceleration 0 to max speed</a></li>
+<li><a href="#_deceleration_max_speed_to_0">Deceleration max speed to 0</a></li>
+</ul>
+</li>
+<li><a href="#_gain">Gain</a>
+<ul class="sectlevel2">
+<li><a href="#_p_gain">P-gain</a></li>
+<li><a href="#_i_gain">I-gain</a></li>
+<li><a href="#_d_gain">D-gain</a></li>
+<li><a href="#_feed_forward_friction_value">Feed forward friction value</a></li>
+<li><a href="#_feed_forward_speed_gain">Feed forward speed gain</a></li>
+<li><a href="#_parallelism_gain">Parallelism gain</a></li>
+</ul>
+</li>
+<li><a href="#_general">General</a>
+<ul class="sectlevel2">
+<li><a href="#_delay_before_closing">Delay before closing</a></li>
+<li><a href="#_positioning_tolerance">Positioning tolerance</a></li>
+<li><a href="#_tracking_error_limitation">Tracking error limitation</a></li>
+<li><a href="#_jog_speed_maximum">Jog speed maximum</a></li>
+<li><a href="#_jog_speed_minimum">Jog speed minimum</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_speed_and_acceleration">Speed and acceleration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="img/PrSpeedAccelerate.png" alt="PrSpeedAccelerate"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_maximum_operating_speed">Maximum operating speed</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm/s</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the maximum travel speed of the Y-axis during pressing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description">Description</h4>
+<div class="paragraph">
+<p>Normally this value should be programmed to the maximum possible speed of the axis, when the control signal is at maximum.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_limited_pressing_speed">Limited pressing speed</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-30</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm/s</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_2">Function</h4>
+<div class="paragraph">
+<p>This parameter is not validated.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_2">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_acceleration_0_to_max_speed">Acceleration 0 to max speed</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-2000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">200</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_3">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the acceleration time of Y-axis during pressing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_3">Description</h4>
+<div class="paragraph">
+<p>This is the nominal acceleration of the axis, used to control the axis from zero to maximum speed in the pressing phase. This parameter must be programmed as the time in which the axis accelerates from zero to maximum speed.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deceleration_max_speed_to_0">Deceleration max speed to 0</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-2000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">200</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_4">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the deceleration time of Y-axis during pressing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_4">Description</h4>
+<div class="paragraph">
+<p>This is the nominal deceleration of the axis, used to control the axis from maximum to zero speed when axis comes to its position in the pressing phase. This parameter must be programmed as the time in which the axis decelerates from maximum to zero speed.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gain">Gain</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/Dgain.png" alt="Dgain">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_p_gain">P-gain</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.1-999.99</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">200</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_5">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the Proportional gain factor of Y-axis during pressing phase.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_5">Description</h4>
+<div class="paragraph">
+<p>This gain factor defines the response to changes in the control signal. A high gain gives a quick response, if the gain is too high it will cause oscillation.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_i_gain">I-gain</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-999.99</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">30</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_6">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the integral gain factor for the Y-axis during pressing phase.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_6">Description</h4>
+<div class="paragraph">
+<p>The integral gain is used for accurate positioning of the axis.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_d_gain">D-gain</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-2000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_precondition">Precondition</h4>
+<div class="paragraph">
+<p>The <strong>D-gain</strong> option will only be available when:</p>
+</div>
+<div class="paragraph">
+<p>The External amplifier type is set to EV2D (Y-Axis Parameters &gt; General &gt; External amplifier type).</p>
+</div>
+<div class="paragraph">
+<p>The Pressure control type is set to Proportional valve (Y-Axis Parameters &gt; Pressure valve &gt; Pressure control type).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_function_7">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the derivative gain factor for the ram axis during the pressing phase.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_7">Description</h4>
+<div class="paragraph">
+<p>The derivative gain is used to minimize oscillations and ensure smooth, stable movement of the ram axis by adjusting the response based on the rate of change of the position.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_feed_forward_friction_value">Feed forward friction value</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-999.9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_8">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the gain factor for braking of Y-axis during closing phase.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_8">Description</h4>
+<div class="paragraph">
+<p>To set gain factor for the axis when approaching the programmed position for a quick and smooth approach to mute point.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_feed_forward_speed_gain">Feed forward speed gain</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-999.9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">150</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_9">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the gain factor for braking of Y-axis during pressing phase.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_9">Description</h4>
+<div class="paragraph">
+<p>To set the gain factor for the axis when approaching the programmed position for a quick and smooth approach to the bend position.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_parallelism_gain">Parallelism gain</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-1000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_10">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the gain factor for parallelism control of Y-axis during fast closing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_10">Description</h4>
+<div class="paragraph">
+<p>The parallelism during pressing can be adjusted with this parameter. A higher value will result in a smaller difference between Y1 and Y2 during the movement. In practice this difference should be approximately 0.01 - 0.03 mm.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Programming this value too high will result in unstable movement of the beam.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general">General</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/PrGeneral.png" alt="PrGeneral">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delay_before_closing">Delay before closing</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-2000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">250</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_11">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the time needed to close the height retaining valves and suction valves.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_11">Description</h4>
+<div class="paragraph">
+<p>When the pressing command becomes active, the proportional valves will not be opened until this delay time has elapsed, to make sure the synchronized start of beam speed after the closing of height retaining and suction valves on either side.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_positioning_tolerance">Positioning tolerance</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-9.999 to -0.005</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">-0.07</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_12">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the positioning tolerance for the Lower Dead Point (LDP) output.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_12">Description</h4>
+<div class="paragraph">
+<p>When the Y-axis reaches the bending position, the LDP output becomes high. With this parameter the tolerance is programmed when the LDP output may become active.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tracking_error_limitation">Tracking error limitation</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0.7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_13">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the maximum allowed difference between the computed position and actual position, during pressing phase.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_13">Description</h4>
+<div class="paragraph">
+<p>The controller will try to match the commanded and actual position as accurate as possible. The tracking error also called as lag error, is the difference between the commanded and actual position. The limitation here is the maximum tracking error allowed during pressing.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jog_speed_maximum">Jog speed maximum</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_14">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the maximum speed in jog or manual mode.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_14">Description</h4>
+<div class="paragraph">
+<p>This parameter is defined in terms of percentage with reference to the maximum speed of pressing. Also, this speed corresponds to the big plus and minus button available in jog mode page.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jog_speed_minimum">Jog speed minimum</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">50</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_15">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the minimum speed in jog or manual mode.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_15">Description</h4>
+<div class="paragraph">
+<p>This parameter is defined in terms of percentage with reference to the maximum speed of pressing. Also, this speed corresponds to the small plus and minus button available in jog mode page.</p>
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,909 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_general">General</a>
+<ul class="sectlevel2">
+<li><a href="#_service_row">Service row</a></li>
+<li><a href="#_status_display">Status display</a></li>
+<li><a href="#_machine_name">Machine name</a></li>
+</ul>
+</li>
+<li><a href="#_machine">Machine</a>
+<ul class="sectlevel2">
+<li><a href="#_total_machine_length">Total machine length</a></li>
+<li><a href="#_cylinder_bore_diameter">Cylinder bore diameter</a></li>
+<li><a href="#_piston_rod_diameter">Piston rod diameter</a></li>
+<li><a href="#_length_between_linear_scales">Length between linear scales</a></li>
+<li><a href="#_machine_length_between_cylinder">Machine length between cylinder</a></li>
+<li><a href="#_machine_length_between_side_frame">Machine length between side frame</a></li>
+<li><a href="#_beam_height">Beam height</a></li>
+<li><a href="#_beam_thickness">Beam thickness</a></li>
+<li><a href="#_inertia_under_beam">Inertia under beam</a></li>
+<li><a href="#_inertia_upper_beam">Inertia upper beam</a></li>
+<li><a href="#_relaxation_stiffness">Relaxation stiffness</a></li>
+<li><a href="#_stiffness_of_frame">Stiffness of frame</a></li>
+<li><a href="#_hand_wheel">Hand wheel</a></li>
+<li><a href="#_sheet_support">Sheet Support</a></li>
+<li><a href="#_manual_z_backgauge">Manual Z backgauge</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_general">General</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/General.png" alt="General">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_service_row">Service row</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function">Function</h4>
+<div class="paragraph">
+<p>To display the complete status, Force &amp; Crown dynamic values and trace functions related soft keys on the numeric screen of run page.<br></p>
+</div>
+<div class="paragraph">
+<p>When <strong>ON</strong> is selected, the service row is available; when <strong>OFF</strong> is selected, the service row is unavailable.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description">Description</h4>
+<div class="paragraph">
+<p>NA</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_status_display">Status display</h3>
+<div class="paragraph">
+<p>In Service row, the status display is showed in numeric screen of run page at the Left side bottom as indicated in the picture. The status display <strong>3.8.0</strong> can be divided into three segments as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Controller status</p>
+</li>
+<li>
+<p>Machine status</p>
+</li>
+<li>
+<p>Program run status</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Controller status:</strong>
+The number and the corresponding meaning of status are as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controller is in Fatal error status and not recoverable until power restart.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controller is in Fatal error status and recoverable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controller is in Normal error status and recoverable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controller is in Ready status for operation.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Machine Status:</strong>
+The number and the corresponding meaning of status are as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0 - 7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The state from 0 to 8 displays the booting mode of the machine with defined parameters.<br>
+If the booting mode is stopped in between 1 &amp; 7, the corresponding message will be displayed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Machine Booting process is completed.<br>
+It may be noted that, after the machine status reaches the state 8, the Stop LED (red) lights ON</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backgauge axes are enabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RAM and Backgauge axes are ready for operation.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Program run Status:</strong>
+The number and the corresponding meaning of status are as follows:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Waiting for Start command (or) Axes are not referenced.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1 - 3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal program functions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wait for foot pedal close trigger.<br>
+It may be noted that if the auto is selected for Backgauge move, then this step will be ignored</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">5 - 7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal parameter functions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Active motion of all axes until they reach their respective target positions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dwell time.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal function.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decompression start.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decompression end.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Force &amp; Crown values:</strong>
+In service row, additionally the Force and Crown, programmed &amp; actual values are displayed in numeric screen of run page at the bottom of axis positions as marked in the picture.</p>
+</div>
+<div class="paragraph">
+<p>Force values are displayed in units of tons and Crown values are displayed in units of micrometre (µm).</p>
+</div>
+<div class="paragraph">
+<p><strong>Trace related soft keys:</strong>
+In service row, <strong>trace</strong> and <strong>trigger</strong> soft keys are displayed in numeric screen of run page at the right side of other available soft keys as shown in the image below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/StatusDisplay.png" alt="StatusDisplay">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_machine_name">Machine name</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_2">Function</h4>
+<div class="paragraph">
+<p>This parameter displays the name of the current machine.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_2">Description</h4>
+<div class="paragraph">
+<p>This parameter is not editable by the user as it is derived directly from the machine file with respect to machine ID.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_machine">Machine</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/BackGauge.png" alt="BackGauge">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_total_machine_length">Total machine length</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_3">Function</h4>
+<div class="paragraph">
+<p>This parameter displays the total length of the machine.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_3">Description</h4>
+<div class="paragraph">
+<p>This parameter is not editable by the user as it is derived directly from the machine file with respect to machine ID.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When the operator programs a bending length longer than the total machine length a warning appears on the screen.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cylinder_bore_diameter">Cylinder bore diameter</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-1000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">150</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_4">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the bore diameter of the cylinder.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_4">Description</h4>
+<div class="paragraph">
+<p>This parameter defines the bore diameter of the cylinder.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/CylinderDia.png" alt="CylinderDia" width="500">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_piston_rod_diameter">Piston rod diameter</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-1000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">140</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_5">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the diameter of the piston rod.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_5">Description</h4>
+<div class="paragraph">
+<p>This parameter defines the diameter of the piston rod.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/CylinderDia.png" alt="CylinderDia" width="500">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_length_between_linear_scales">Length between linear scales</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-99999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3270</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_6">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the distance between the left and right linear scales.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_6">Description</h4>
+<div class="paragraph">
+<p>The length between the left and right linear scales is used for the synchronization of tandem machine.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/LengthLinearScale.png" alt="LengthLinearScale" width="500">
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_machine_length_between_cylinder">Machine length between cylinder</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-99999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">2610</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_7">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the distance between the centre of left and right hydraulic cylinders.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_7">Description</h4>
+<div class="paragraph">
+<p>The length of machine table between the centre of left and right cylinders is used to compute the table deflection.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_machine_length_between_side_frame">Machine length between side frame</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-99999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">3380</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_8">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the distance between the two side frames of the machine.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_8">Description</h4>
+<div class="paragraph">
+<p>The length between the left and right-side frames is used for crowning computation, if the hydraulic crowning is enabled in the machine.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beam_height">Beam height</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-99999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1050</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_9">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the height of the upper beam (RAM).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_9">Description</h4>
+<div class="paragraph">
+<p>The height of the RAM is used for the internal computation to calculate the rigidity factor of the beam.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_beam_thickness">Beam thickness</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-99999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">52</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_10">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the thickness of the upper beam (RAM).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_10">Description</h4>
+<div class="paragraph">
+<p>The thickness of the RAM is used for the internal computation to calculate the rigidity factor of the beam.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inertia_under_beam">Inertia under beam</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-99999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1238</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">mm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_11">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the centre moment of inertia of the under beam called machine table.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_11">Description</h4>
+<div class="paragraph">
+<p>The moment of inertia of the machine table is used to compute the table deflection according to the amount of force acting on it.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_inertia_upper_beam">Inertia upper beam</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">0-99999</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_12">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the centre moment of inertia of the upper beam called RAM.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_12">Description</h4>
+<div class="paragraph">
+<p>The moment of inertia of the RAM is used to compute the beam deflection according to the amount of force acting on it.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_relaxation_stiffness">Relaxation stiffness</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-1000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">µm/KN</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_13">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the relaxation stiffness of the frame.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_13">Description</h4>
+<div class="paragraph">
+<p>The relaxation stiffness parameter is used to compute the decompression distance. Generally, this value multiplied with computed force is the decompression distance. It is also used in deflection computation if linear is selected in deflection method (Machine settings &#8594; Defaults &#8594; Bend Program &#8594; deflection method).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stiffness_of_frame">Stiffness of frame</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">1-100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">80</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">%</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_14">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the stiffness of the frame used to compute the Y-axis depth calculation.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_14">Description</h4>
+<div class="paragraph">
+<p>The stiffness of frame is used to compute the deflection of the side frame according to the programmed force. Thereby the compensation distance due to deflection of side frame is adjusted in Y-axis depth calculation.</p>
+</div>
+<div class="paragraph">
+<p>This parameter is programmed as a percentage of the value programmed for the machine parameter 'Relaxation Stiffness'.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hand_wheel">Hand wheel</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_15">Function</h4>
+<div class="paragraph">
+<p>This parameter enables the handwheel function in the machine.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_15">Description</h4>
+<div class="paragraph">
+<p>Using handwheel, RAM (Y-Axis) and all the backgauge axes are moved in a very precise manner. It is mainly used during manual clamping of tools, where the pressure is set to minimum, the punch and die brought in contact with each other and then clamped to make sure the centre between the tools are aligned.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sheet_support">Sheet Support</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Administrator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_16">Function</h4>
+<div class="paragraph">
+<p>This parameter enables the sheet follower function in the machine. Only if this parameter is ON the S1 and S2 axis settings will be displayed.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_16">Description</h4>
+<div class="paragraph">
+<p>Sheet support is used to support the part and reducing human effort and increasing bend accuracy. Kindly note that to use sheet support function, sheet follower license needs to be enabled in license feature list.</p>
+</div>
+<div class="paragraph">
+<p>Sheet support implementation is as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>S1 and S2 will be move to 0 when back gauge is positioned irrespective of whether bend required
+sheet support to move. This is to ensure sheet support is in flat condition when bending a part.</p>
+</li>
+<li>
+<p>If the sheet support is enabled corresponding S1 or S2 or both will move while bending.</p>
+</li>
+<li>
+<p>After reaching TDC, S1 or S2 or both will return to flat position if it is enabled.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Axis parameter for S1 and S2 are similar to other axis except for minor changes like the minimum and maximum unit is degrees.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_manual_z_backgauge">Manual Z backgauge</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON/OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_17">Function</h4>
+<div class="paragraph">
+<p>Manual Z backgauge control allows the operator to adjust and position the backgauge along the Z-axis for precise sheet metal bending. This setting will inform the user whether there is a provision to mount an extra Z-axis back gauge in the machine</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_17">Description</h4>
+<div class="paragraph">
+<p>Enables manual input for side-to-side backgauge positioning, ensuring accurate placement of the workpiece.</p>
+</div>
+</div>
+</div>
+</div>
+</div>

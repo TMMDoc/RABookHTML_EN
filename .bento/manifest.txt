@@ -1,4 +1,4 @@
 TITLE=Right Angle Reference Manual
-OUTDIR=../RABookHtml
+OUTDIR=../RABookHtml_EN
 LOGO=img/raicon.png,45,15
 COPYRIGHT=Copyright &copy; 2023 by Metamation. All rights reserved.

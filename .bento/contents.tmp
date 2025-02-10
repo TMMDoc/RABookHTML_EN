@@ -11,6 +11,44 @@ Index
   ToolInventory
   Index
     MachineSettings
+    Index
+      Machine
+      Tools
+      Safety
+      CANports
+      PLCOptions
+      DigitalInputConfig
+      Maintenance
+      Log
+      Diagnostics
+      Display
+      DigitalProtractor
+      Barcode
+    Index
+      General
+      Mute
+      Feedback
+      PressureValve
+      PressureSensor
+      Idle
+      FastClosing
+      FastClosingAdv
+      Pressing
+      PressureAdvancedPos
+      Decompression
+      Opening
+      YAxisCold
+      Crowning
+      ElectricPressbrake
+    Index
+      XAxis
+      HandWheel
+      FL1
+    Index
+      BendCycle
+      BendProgram
+      ImportExport
+      Others
 Index
 Index
 Index

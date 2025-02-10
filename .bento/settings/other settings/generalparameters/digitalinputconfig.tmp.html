@@ -1,0 +1,1095 @@
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_description">Description</a>
+<ul class="sectlevel2">
+<li><a href="#_emergency_stop">Emergency stop</a></li>
+<li><a href="#_foot_pedal_close">Foot pedal close</a></li>
+<li><a href="#_foot_pedal_open">Foot pedal open</a></li>
+<li><a href="#_pump_on_input">Pump ON input</a></li>
+<li><a href="#_crawl_speed_input">Crawl speed input</a></li>
+<li><a href="#_punch_clamp_input">Punch clamp input</a></li>
+<li><a href="#_die_clamp_input">Die clamp input</a></li>
+<li><a href="#_side_enable_off">Side enable off</a></li>
+<li><a href="#_robot_mode">Robot mode</a></li>
+<li><a href="#_side_doors">Side doors</a></li>
+<li><a href="#_rear_doors">Rear doors</a></li>
+<li><a href="#_oil_low_level">Oil low level</a></li>
+<li><a href="#_oil_high_level">Oil high level</a></li>
+<li><a href="#_oil_temperature_working_range">Oil temperature working range</a></li>
+<li><a href="#_oil_temperature_fan">Oil temperature fan</a></li>
+<li><a href="#_oil_filter">Oil filter</a></li>
+</ul>
+</li>
+<li><a href="#_robot_configuration">Robot configuration</a>
+<ul class="sectlevel2">
+<li><a href="#_auto_mode">Auto mode</a></li>
+<li><a href="#_program_start">Program start</a></li>
+<li><a href="#_program_start_2">Program start</a></li>
+<li><a href="#_fastdown_enable">Fastdown enable</a></li>
+<li><a href="#_clamp_move_enable">Clamp move enable</a></li>
+<li><a href="#_ldp_move_enable">LDP move enable</a></li>
+<li><a href="#_udp_move_enable">UDP move enable</a></li>
+<li><a href="#_step_change">Step change</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_description">Description</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These parameters define the digital input configuration of connected inputs to PLC logic. The internal function of PLC is
+coded with the following digital inputs and hence it is necessary to select the type of contact used in the machine. Even,
+if any input is not used then it is better to select as NC type to avoid unnecessary messages in the screen.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/DigitalnputConfig.png" alt="DigitalnputConfig">
+</div>
+</div>
+<div class="sect2">
+<h3 id="_emergency_stop">Emergency stop</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open(NO) , Control by safety</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open(NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of emergency stop connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_2">Description</h4>
+<div class="paragraph">
+<p>If NO contacts are connected to digital inputs of PLC 'Open (NO)' has to be selected.
+If the emergency stop signal is from the safety controller then 'Control by safety' has to be selected.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_foot_pedal_close">Foot pedal close</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open &amp; Closed (NO&amp;NC), Open(NO), Closed(NC), control by safety</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open &amp; Closed(NO&amp;NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_2">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of foot pedal close switch connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_3">Description</h4>
+<div class="paragraph">
+<p>Generally, any switch has two types of contact, namely Normally Closed (NC) and Normally opened (NO). In normal press brake machines, both the contacts of foot pedal switches are connected to digital inputs for safety considerations and the internal PLC function code is also considered the same. Hence, here is an option to select the type of contacts used in the machine. If the foot pedal close signal is from the safety controller then 'Control by safety' has to be selected.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_foot_pedal_open">Foot pedal open</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open &amp; Closed (NO&amp;NC), Open(NO), Closed(NC), control by safety</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open &amp; Closed(NO&amp;NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_3">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of foot pedal open switch connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_4">Description</h4>
+<div class="paragraph">
+<p>In normal press brake machines, both the contacts of foot pedal switches are connected to digital inputs for safety considerations and the internal PLC function code is also considered the same. Hence, here is an option to select the type of contacts used in the machine. If the foot pedal open signal is from the safety controller then 'Control by safety' has to be selected.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_pump_on_input">Pump ON input</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_4">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of Hydraulic Pump ON feedback connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_5">Description</h4>
+<div class="paragraph">
+<p>In normal press brake machines, the Pump ON feedback confirms the start of induction motor of the pump. It is with this input; the other operation of the machine is started. Hence, here is an option to select the type of contact used in the machine.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_crawl_speed_input">Crawl speed input</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_5">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of crawl speed input connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_6">Description</h4>
+<div class="paragraph">
+<p>This input is used to set the RAM to crawl speed when required.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_punch_clamp_input">Punch clamp input</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_6">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of punch clamp input feedback connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_7">Description</h4>
+<div class="paragraph">
+<p>Based on this input the RA control obtains the status of punch clamp.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_die_clamp_input">Die clamp input</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_7">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of Die clamp input feedback connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_8">Description</h4>
+<div class="paragraph">
+<p>Based on this input RA control obtains the status of Die clamp.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_side_enable_off">Side enable off</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_8">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of safety PLC&#8217;s enable signal to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_9">Description</h4>
+<div class="paragraph">
+<p>This signal is used to give enable input to PLC.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_robot_mode">Robot mode</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_9">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type of robot mode input connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_10">Description</h4>
+<div class="paragraph">
+<p>Robot mode is used to avoid laser guard. With this parameter the contact type of this input given to PLC can be specified.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_side_doors">Side doors</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_10">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of side door switch connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_11">Description</h4>
+<div class="paragraph">
+<p>This parameter is available, only if Safety option(in PLC options) is OFF and Side Door is '1 input' (if 2 input is selected, left door and right door parameters appear separately) . By hardware, the left and right door switches are merged together and connected as single input to PLC. The internal function of PLC uses this input to stop the Y-axis, when any one of the side door is opened, and the corresponding error message appears on the screen.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rear_doors">Rear doors</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_11">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of rear door switch connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_12">Description</h4>
+<div class="paragraph">
+<p>The internal function of PLC uses this input to Emergency stop and cut off the hydraulic pump, when rear door is opened, and the corresponding error message appears on the screen.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oil_low_level">Oil low level</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_12">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type Oil low level feedback connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_13">Description</h4>
+<div class="paragraph">
+<p>Based on this input RA control obtains the status of Oil level.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oil_high_level">Oil high level</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_13">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the contact type Oil high level feedback connected to digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_14">Description</h4>
+<div class="paragraph">
+<p>Based on this input RA control obtains the status of oil level.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oil_temperature_working_range">Oil temperature working range</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_14">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of oil temperature working range switch connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_15">Description</h4>
+<div class="paragraph">
+<p>The internal function of PLC uses this input for the normal operation of press brake machine. This input in combination with Oil temperature Fan input provides the following function:</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Oil Temperature Working Range</th>
+<th class="tableblock halign-center valign-top">Oil Temperature Fan</th>
+<th class="tableblock halign-center valign-top">PLC Internal function</th>
+<th class="tableblock halign-center valign-top">Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Normal working condition</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">NA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Bend program aborted, cold condition activated, and 180-degree bend program allowed for warm-up of oil</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Oil temperature low</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">OFF</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">ON</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Hydraulic Pump is shut down and not possible for further operations</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Oil temperature high</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oil_temperature_fan">Oil temperature fan</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_15">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of oil temperature fan switch connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_16">Description</h4>
+<div class="paragraph">
+<p>The internal function of PLC uses this input for switching on the cooling fan of hydraulic oil.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_oil_filter">Oil filter</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_16">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of oil filter switch connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_17">Description</h4>
+<div class="paragraph">
+<p>The internal function of PLC uses this input for raising the warning message in the screen. So, the operator needs to clean the filter or replace it.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_robot_configuration">Robot configuration</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="img/RobotConfig.png" alt="RobotConfig">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If robot interface is ON in <strong>General parameters &#8594; PLC</strong> options, the following robot input configurations will be available.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_auto_mode">Auto mode</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_17">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of auto mode I/P connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_18">Description</h4>
+<div class="paragraph">
+<p>This signal is from the robot controller to RA SmartCore(NC).</p>
+</div>
+<div class="paragraph">
+<p><strong>Signal Description:</strong> Robot in Auto mode - Switch Bend guard to Mute.</p>
+</div>
+<div class="paragraph">
+<p>When the 'Robot Option' is selected in the PLC, the input 'Robot Auto Mode' will activate the robot functions. If Laser Safe is connected, then the Bend Guard mute is also activated.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_program_start">Program start</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_18">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of auto mode I/P connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_19">Description</h4>
+<div class="paragraph">
+<p>This signal is from the robot controller to RA SmartCore(NC).</p>
+</div>
+<div class="paragraph">
+<p><strong>Signal Description:</strong> Robot program is started - Start button in Panel.</p>
+</div>
+<div class="paragraph">
+<p>The 'NC Start' output signal from the NC will be ON only if 'Program Start' input from Robot controller is ON.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_program_start_2">Program start</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_19">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of program abort I/P connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_20">Description</h4>
+<div class="paragraph">
+<p>This signal is from the robot controller to RA SmartCore(NC).</p>
+</div>
+<div class="paragraph">
+<p><strong>Signal Description:</strong> Robot program is aborted - Stop button in Panel.</p>
+</div>
+<div class="paragraph">
+<p>During any bend step, if the <strong>Program Abort</strong> signal from Robot controller is set High, then all the moving axes (including RAM) are quick stopped and the 'Press OK' &amp; 'NC Start' signals from NC is deactivated, and <strong>program aborted in Robot</strong> message is displayed.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fastdown_enable">Fastdown enable</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_20">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of fastdown enable I/P connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_21">Description</h4>
+<div class="paragraph">
+<p>This signal is from the robot controller to RA SmartCore.</p>
+</div>
+<div class="paragraph">
+<p><strong>Signal Description:</strong> To enable the RAM Fast Down movement in SmartCore.</p>
+</div>
+<div class="paragraph">
+<p>When the 'Fast Down Enable' signal is ON, the RAM moves to mute point and the 'Below Mute point' signal is set to High, now the NC waits for 'Clamp move enable' signal from robot controller to move to the pinch point.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_clamp_move_enable">Clamp move enable</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_21">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of clamp move enable I/P connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_22">Description</h4>
+<div class="paragraph">
+<p>This signal is from the robot controller to RA SmartCore(NC).</p>
+</div>
+<div class="paragraph">
+<p><strong>Signal Description:</strong> To enable the RAM movement to Clamping point in SmartCore.</p>
+</div>
+<div class="paragraph">
+<p>After RAM moves to mute point the 'Below Mute point' signal is set to High, the NC waits for the 'Clamp Move Enable' signal from the robot controller to move to the pinch point. After reaching pinch point, the “Clamping point” signal is set high.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ldp_move_enable">LDP move enable</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_22">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of LDP move enable I/P connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_23">Description</h4>
+<div class="paragraph">
+<p>This signal is from the robot controller to RA Smartcore(NC).</p>
+</div>
+<div class="paragraph">
+<p><strong>Signal Description:</strong> To enable the RAM movement to LDP in SmartCore.</p>
+</div>
+<div class="paragraph">
+<p>When the 'LDP Move Enable' signal is ON, the RAM moves to LDP point and the 'LDP reached' signal is set to High, now the machine will go to dwell state and wait here until the completion of dwell time set in the current bend cycle.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_udp_move_enable">UDP move enable</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_23">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of UDP move enable I/P connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_24">Description</h4>
+<div class="paragraph">
+<p>This signal is from the robot controller to RA Smartcore(NC).</p>
+</div>
+<div class="paragraph">
+<p><strong>Signal Description:</strong> To enable the RAM movement to UDP in SmartCore.</p>
+</div>
+<div class="paragraph">
+<p>When the dwell time is completed, the RAM is moved up to the decompression point and the 'EoD_Point' signal is set to High, now the machine will be waiting for the 'UDP Move Enable' signal from the robot controller to move to UDP point.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_step_change">Step change</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Range</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO) , Closed (NC)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Default</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Open (NO)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Units</strong></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Access</strong></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Service</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_function_24">Function</h4>
+<div class="paragraph">
+<p>This parameter defines the type of contact of step change enable I/P connected to the digital input of PLC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_description_25">Description</h4>
+<div class="paragraph">
+<p>This signal is from the robot controller to RA Smartcore.</p>
+</div>
+<div class="paragraph">
+<p><strong>Signal Description:</strong> To enable the next step in the bend program.</p>
+</div>
+<div class="paragraph">
+<p>After reaching UDP, the machine will be waiting for 'Step change' signal from the Robot controller to initiate the backgauge movements for next bend cycle.</p>
+</div>
+</div>
+</div>
+</div>
+</div>

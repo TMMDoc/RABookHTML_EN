@@ -1,8 +1,8 @@
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_direct_program">Direct Program</a></li>
-<li><a href="#_models">Models</a>
+<li><a href="#_program_types">Program Types</a></li>
+<li><a href="#_edit_commands">Edit Commands</a>
 <ul class="sectlevel2">
 <li><a href="#_edit_model_sequence">Edit Model &#8594; Sequence</a></li>
 <li><a href="#_zooming_and_panning_in_the_3d_view">Zooming and Panning in the 3D View</a></li>
@@ -25,19 +25,19 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_direct_program">Direct Program</h2>
+<h2 id="_program_types">Program Types</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Direct programs are the programs that have been created directly on the control using the Direct Program environment. There are no 3D illustrations available for each step, nor can do any collision checks for these, except machine-against-machine. When a program is picked and open for editing, a screen very similar to the Direct program creation is presented, except that you are now editing a program that was created earlier.</p>
+<p><strong>Direct programs</strong> are the programs that have been created directly on the control using the Direct Program environment. There are no 3D illustrations available for each step, nor can do any collision checks for these, except machine-against-machine. When a program is picked and open for editing, a screen very similar to the Direct program creation is presented, except that you are now editing a program that was created earlier.</p>
+</div>
+<div class="paragraph">
+<p><strong>3D Model</strong> programs are created either by importing from a 3D model, or by folding up a DXF, or using the profile library. These programs have an accompanying 3D model which can be used to set up back-gauges, or to modify the sequence. When these programs are run, step-by-step 3D illustrations are displayed showing the bending steps that are in progress.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_models">Models</h2>
+<h2 id="_edit_commands">Edit Commands</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>These are the bending programs that have been created either by importing from a 3D model, or by folding up a DXF, or using the profile library. These programs have an accompanying 3D model which can be used to set up back-gauges, or to modify the sequence. When these programs are run, step-by-step 3D illustrations are displayed showing the bending steps that are in progress.</p>
-</div>
 <div class="paragraph">
 <p><span class="underline"><strong>edit:</strong></span></p>
 </div>
@@ -69,34 +69,58 @@
 <p>This command allows user to perform operations like converting 3d program to direct program, cloning, exporting and importing files. This command supports the selection multiple programs. You can select or de-select a program by touching it. The options provided by the transfer command include:</p>
 </div>
 <div class="paragraph">
-<p><strong>save direct:</strong></p>
+<p><strong>Save direct</strong> command allows the user to convert 3d program to direct program. 3d program should have only one setup. Also, in a single setup, it is not possible to use multiple punch or die.</p>
 </div>
 <div class="paragraph">
-<p>This command allows the user to convert 3d program to direct program. 3d program should have only one setup. Also, in a single setup, it is not possible to use multiple punch or die.</p>
+<p><strong>Clone</strong> command allows user to make an exact copy of the program(s) selected. Select one or more programs and then press this button to create a copy of the selected program(s). When more than one program is cloned, you get a Clone files dialog which asks whether you want to clone the selected number of files. Once the OK mark is pressed, the files are cloned. Generally, the name of the cloned file will have a number after the part name separated by a hyphen (e.g.in case, you clone a part named P5 then the name of the cloned part will be P5-1. If the name P5-1 already exists, the number will be incremented by one i.e. P5-2).</p>
 </div>
 <div class="paragraph">
-<p><strong>clone:</strong></p>
+<p><strong>Save flat</strong> command is used to save the selected program as a flat, i.e. the shape of the part before bending. Pressing this button brings up the Select location to save flat dialog, where one can choose the folder location to save the flat part.</p>
 </div>
 <div class="paragraph">
-<p>This command allows user to make an exact copy of the program(s) selected. Select one or more programs and then press this button to create a copy of the selected program(s). When more than one program is cloned, you get a Clone files dialog which asks whether you want to clone the selected number of files. Once the OK mark is pressed, the files are cloned. Generally, the name of the cloned file will have a number after the part name separated by a hyphen (e.g.in case, you clone a part named P5 then the name of the cloned part will be P5-1. If the name P5-1 already exists, the number will be incremented by one i.e. P5-2).</p>
+<p><strong>Lock</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Users can access this  menu only if they have Admin or Service level user access.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p><strong>save flat:</strong></p>
+<p>When a program is locked by the user, the program cannot be edited. Only <strong>corrections</strong> can be added to this program.</p>
 </div>
 <div class="paragraph">
-<p>This command is used to save the selected program as a flat, i.e. the shape of the part before bending. Pressing this button brings up the Select location to save flat dialog, where one can choose the folder location to save the flat part.</p>
+<p>To lock a program from <strong>edit</strong> page, select the program and click the transfer icon and select <strong>lock</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/TransferLock.png" alt="TransferLock">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/Lock.png" alt="Lock">
+</div>
 </div>
 <div class="paragraph">
-<p><strong>export:</strong></p>
+<p>To unlock the program click again on the transfer icon and select <strong>unlock</strong>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/Unlock.png" alt="Unlock">
+</div>
 </div>
 <div class="paragraph">
-<p>When pressed, this command brings up the Export File dialog through which you pick the location to export the selected file(s).</p>
+<p><strong>Export</strong> command brings up the Export File dialog through which you pick the location to export the selected file(s).</p>
 </div>
 <div class="paragraph">
-<p><strong>import:</strong></p>
-</div>
-<div class="paragraph">
-<p>Program(s) can be imported by using this feature. This button brings up the Import Files dialog using which one or more 3D program or Direct program files can be selected for import. Once the files are selected press <span class="icon"><i class="fa fa-check"></i></span> mark in the dialog to import the file(s). If the name of the file(s) you try to import already exists, a warning message is displayed as seen in the picture below asking whether to replace the existing file(s).</p>
+<p><strong>Import</strong> command brings up the Import Files dialog using which one or more 3D program or Direct program files can be selected for import. Once the files are selected press <span class="icon"><i class="fa fa-check"></i></span> mark in the dialog to import the file(s). If the name of the file(s) you try to import already exists, a warning message is displayed as seen in the picture below asking whether to replace the existing file(s).</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="img/confirm.png" alt="confirm"></span></p>
@@ -105,7 +129,7 @@
 <p>Press <span class="icon"><i class="fa fa-close"></i></span> to exit from the transfer command.</p>
 </div>
 <div class="paragraph">
-<p><strong>organize:</strong></p>
+<p><span class="underline"><strong>organize:</strong></span></p>
 </div>
 <div class="paragraph">
 <p>Use this command to customize the view of the Edit page. A dialog as shown in the picture below comes up when you press this button.</p>
@@ -124,29 +148,6 @@
 </div>
 <div class="paragraph">
 <p>Using the <strong>Show Thumbnails</strong>, the thumbnail display can be turned on or off for the programs in the edit page. Use the <strong>delete</strong> button to remove a sub-directory. Note that only a sub-directory that is empty can be deleted. Press <strong>done</strong> to apply the changes and exit.</p>
-</div>
-<div class="paragraph">
-<p><strong>Lock</strong></p>
-</div>
-<div class="paragraph">
-<p>Using this option the created program can be locked for editing.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/lockprogram.png" alt="lockprogram">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Users can access this  menu only if they have Admin or Service level user access.
-</td>
-</tr>
-</table>
 </div>
 <div class="sect2">
 <h3 id="_edit_model_sequence">Edit Model &#8594; Sequence</h3>
