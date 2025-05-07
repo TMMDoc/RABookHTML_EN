@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="res/tree.css">
   <link rel="stylesheet" href="res/sibling.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Welcome to Right Angle</title>
+  <title>Troubleshooting Error Codes</title>
 </head>
 <body id="site-body" onload="sLoaded()">
     <header id="site-header">
@@ -21,7 +21,7 @@
         <nav id="site-nav">
             <div class="treesite">
   <ul>
-    <li><button class="tree blank"></button><a class="active" href="index.html">Welcome to Right Angle</a></li>
+    <li><button class="tree blank"></button><a href="index.html">Welcome to Right Angle</a></li>
     <li><button class="tree blank"></button><a href="installation.html">Installing the Software</a></li>
     <li><button class="tree blank"></button><a href="home/index.html">Home</a></li>
     <li><button class="tree blank"></button><a href="create/index.html">Create</a></li>
@@ -111,7 +111,7 @@
     <li><button class="tree blank"></button><a href="part settings/index.html">Part Settings</a></li>
     <li><button class="tree blank"></button><a href="link programs/index.html">Link Programs</a></li>
     <li><button class="tree blank"></button><a href="table programming/index.html">Table Programming</a></li>
-    <li><button class="tree blank"></button><a href="troubleshooting.html">Troubleshooting Error Codes</a></li>
+    <li><button class="tree blank"></button><a class="active" href="troubleshooting.html">Troubleshooting Error Codes</a></li>
   </ul>
 </div>
 
@@ -124,26 +124,222 @@
     </button>
   </div>
   <div>
-    <a href="index.html">Welcome to Right Angle</a>
+    <a href="troubleshooting.html">Troubleshooting Error Codes</a>
   </div>
 </nav>
 
             <div id="site-crumb-below">
                 <div id="site-toc-left">
                     <article id="article">
-                        <h1>Welcome to Right Angle</h1>
+                        <h1>Troubleshooting Error Codes</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Right Angle is an HMI software, used to operate CNC press brake.</p>
+<p>This chapter describes the many error codes available in RA, along with their descriptions, severity, and corrective measures.</p>
+</div>
+<div class="paragraph">
+<p>Error codes can be categorized as follow:</p>
+</div>
+<div class="paragraph">
+<p><strong>Machine errors:</strong> Errors that are issued based on the feedback from a machine controller.</p>
+</div>
+<div class="paragraph">
+<p><strong>Software errors:</strong> Errors that are issued by the HMI software used to operate the machine.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_machine_errors">Machine Errors</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_oil_temperature_low">Oil temperature low</h3>
+<div class="paragraph">
+<p><span class="image"><img src="img/lowoil.png" alt="lowoil"></span></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error</th>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Corrective measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hydraulic oil temperature low</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When the hydraulic oil temperature is low (during cold start condition), the machine shows an error. Homing of ram Y1 ans Y2 moves to the origin position.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select the <strong>Bend 180 degree program</strong> to run the machine in <em>Endurance Mode</em>, until the warning disappears.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_software_errors">Software Errors</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_flange_too_narrow_error">Flange too narrow error</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error</th>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Corrective measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flange too narrow</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flange is not seated properly in the punch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Make sure proper seating of the flange over the die shoulders.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Sheet may tilt during bending and cause injury to operator.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hemming_error">Hemming error</h3>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error</th>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Corrective measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IO Hem punch die collision error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RA version beyond 145 will show this error while using IO Hem tooling</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ram and crown corrections are auto corrected from RA 146. No actions required.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Using RA version less than 145 with IO hem punch will cause punch and die to crash, resulting in collision error.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_higher_punch_angle_error">Higher punch angle error</h3>
+<div class="paragraph">
+<p><span class="image"><img src="img/higherpunchangle.png" alt="higherpunchangle"></span></p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Error</th>
+<th class="tableblock halign-left valign-top">Severity</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Corrective measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Punch angle greater than die angle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Warning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When punch angle is greater than die angle, warning message is shown for the bend</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select proper tooling for the bend.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Punch and die can lock into each other.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 </div>
 
                     </article>
                 </div>
                 <div id="site-toc-holder">
-                    <aside id="site-toc"></aside>
+                    <aside id="site-toc">
+  <h3>Contents</h3>
+  <ul>
+    <li level="1">
+      <a href="#_machine_errors">Machine Errors</a>
+    </li>
+    <li level="2">
+      <a href="#_oil_temperature_low">Oil temperature low</a>
+    </li>
+    <li level="1">
+      <a href="#_software_errors">Software Errors</a>
+    </li>
+    <li level="2">
+      <a href="#_flange_too_narrow_error">Flange too narrow error</a>
+    </li>
+    <li level="2">
+      <a href="#_hemming_error">Hemming error</a>
+    </li>
+    <li level="2">
+      <a href="#_higher_punch_angle_error">Higher punch angle error</a>
+    </li>
+  </ul>
+</aside>
+
                 </div>
             </div>
             <nav class="pagination">
-  <span class="next"><a href="installation.html">Installing the Software</a></span>
+  <span class="prev"><a href="table programming/index.html">Table Programming</a></span>
 </nav>
 
         </div>
@@ -158,7 +354,7 @@
         </div>
         <div class="middle"></div>
         <div class="right">
-            <p>Compiled 2025.05.07 by Bento 36</p>
+            <p>Compiled by Bento</p>
             <img src="res/bento.png" />
         </div>
     </footer>
